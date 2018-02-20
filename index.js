@@ -25,3 +25,15 @@ function min(numbers){
 }
 min([34, 54, 90, 67,95]);
 console.log(min([34, 54, 90, 67,95]));
+
+function computeTheAverage(arr){
+	let sum = 0  
+	   arr.forEach(function addNumber (number){
+   
+		sum += number;
+		
+	}) 
+	return sum / arr.length;
+   } 
+   
+   console.log(computeTheAverage([20, 50, 59, 68]));
