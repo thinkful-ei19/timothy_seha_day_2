@@ -35,3 +35,27 @@ function filter(arr ,fn){
  }
  return newArray;
 }
+
+console.log(filter(myNames, name => names[0] === 'R'));
+
+
+
+function hazardWarningCreator(typeOfWarning){
+	let warningCounter =  0;
+	return function (location){
+			warningCounter ++;
+		console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+		console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+    return warningCounter;
+	};
+}
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const constructionAreaWarning = hazardWarningCreator('Watch for moving Equipment');
+const radiotionAreaWarning = hazardWarningCreator('High radiation area');
+
+rocksWarning('Main St and Pacific Ave');
+rocksWarning('Centinela Ave and Olympic Blvd');
+radiotionAreaWarning('Aden Ln');
+constructionAreaWarning ('hdjd st');
+rocksWarning('Main St');
+
