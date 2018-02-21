@@ -74,7 +74,25 @@ function turtleMovement (arr) {
 	// use forEach method to log out how many step the turtle took forward and to the left 
  }
 	 
- 
-
 
 // console.log(turtleMovement([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]])); 
+
+
+const sentence = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+const array = sentence.split(' ');
+
+    function reduce(decoded){
+    	return decoded.reduce(function(decodedString, word, index){
+        if (word.length === 3){
+        	return decodedString + ' ';
+
+        	console.log('Value of decodedString at index ${index} is ${decodedString}');
+        }
+        else{
+
+        return decodedString + word[word.length - 1].toUpperCase();
+     }
+    }, '');
+
+const result = reduce(array);
+console.log(result);
