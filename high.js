@@ -36,7 +36,7 @@ function filter(arr ,fn){
  return newArray;
 }
 
-console.log(filter(myNames, name => names[0] === 'R'));
+// console.log(filter(myNames, name => names[0] === 'R'));
 
 
 
@@ -59,3 +59,22 @@ radiotionAreaWarning('Aden Ln');
 constructionAreaWarning ('hdjd st');
 rocksWarning('Main St');
 
+
+function turtleMovement (arr) {
+	
+	arr.filter(function (steps) { 
+         return steps[0] >= 0 && steps[1] >= 0
+	}).map(function(steps) {
+		return steps[0] + steps[1];
+	} ).forEach(function(stepCount){
+		console.log(stepCount)
+	})
+	
+	// make a callback function to added the first index numbers and second index numbers in the array
+	// use forEach method to log out how many step the turtle took forward and to the left 
+ }
+	 
+ 
+
+
+// console.log(turtleMovement([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]])); 
